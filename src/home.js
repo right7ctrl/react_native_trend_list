@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import Card from './components/Card'
 
 export default class Home extends Component {
     render() {
@@ -8,28 +8,16 @@ export default class Home extends Component {
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={styles.main}>
                     <View style={styles.row}>
-                        <View style={styles.item}>
-                            <Text>asdad</Text>
-                        </View>
-                        <View style={styles.item}>
-                            <Text>asdad</Text>
-                        </View>
+                        <Card />
+                        <Card />
                     </View>
                     <View style={styles.row}>
-                        <View style={styles.item}>
-                            <Text>asdad</Text>
-                        </View>
-                        <View style={styles.item}>
-                            <Text>asdad</Text>
-                        </View>
+                        <Card />
+                        <Card />
                     </View>
                     <View style={styles.row}>
-                        <View style={styles.item}>
-                            <Text>asdad</Text>
-                        </View>
-                        <View style={styles.item}>
-                            <Text>asdad</Text>
-                        </View>
+                        <Card />
+                        <Card />
                     </View>
                 </View>
 
@@ -47,21 +35,5 @@ const styles = StyleSheet.create({
     row: {
         flex: 1,
         flexDirection: 'row'
-    },
-    item: {
-        flex: 1,
-        backgroundColor: 'white',
-        marginHorizontal: 8,
-        marginVertical: 8,
-        borderRadius: 12,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.23,
-        shadowRadius: 2.62,
-
-        elevation: 4,
     }
 });
