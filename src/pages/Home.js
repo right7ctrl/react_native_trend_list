@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, Platform } from 'react-native';
 import Card from '../components/Card'
 
 export default class Home extends Component {
     render() {
         return (
-            <SafeAreaView style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1, paddingTop: 36 }}>
                 <Text style={styles.title}>Trendler</Text>
                 <View style={styles.main}>
                     <View style={styles.row}>

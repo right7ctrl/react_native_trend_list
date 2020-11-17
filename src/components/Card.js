@@ -18,7 +18,7 @@ export default class Card extends Component {
 Card.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    assetName: PropTypes.string
+    assetName: PropTypes.number
 };
 
 const styles = StyleSheet.create({
