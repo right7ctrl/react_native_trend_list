@@ -1,0 +1,12 @@
+{
+  "name": "trends_rn",
+  "displayName": "trends_rn",
+  "expo": {
+    "name": "trends_rn",
+    "slug": "trends_rn",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
