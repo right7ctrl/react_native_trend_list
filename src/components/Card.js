@@ -2,14 +2,18 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 
 const Card = (props) => {
+    const navigation = useNavigation();
 
     return (
         <View style={styles.card}>
             <TouchableOpacity onPress={() => {
-                console.log(props.navigation);
+                navigation.navigate('List', {
+                    navigation: navigation, title: props.title, id: props.id
+                });
             }} style={styles.touchableOpacity}>
                 <Image style={styles.icon} source={props.assetName} />
                 <Text style={styles.title}>{props.title}</Text>
@@ -20,12 +24,6 @@ const Card = (props) => {
 
     );
 }
-
-Card.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    assetName: PropTypes.number
-};
 
 const styles = StyleSheet.create({
     card: {

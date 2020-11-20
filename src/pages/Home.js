@@ -9,16 +9,16 @@ const Home = () => {
             <Text style={styles.slogan}>Gündemi takip edin!</Text>
             <View style={styles.container}>
                 <View style={styles.row}>
-                    <Card title="Google" description="Popüler aramaları görüntüle" assetName={require('../../assets/google.png')} />
-                    <Card title="Ekşi Sözlük" description="Gündemdeki başlıkları görüntüle" assetName={require('../../assets/eksi.png')} />
+                    <Card id="google" title="Google" description="Popüler aramaları görüntüle" assetName={require('../../assets/google.png')} />
+                    <Card id="eksi" title="Ekşi Sözlük" description="Gündemdeki başlıkları görüntüle" assetName={require('../../assets/eksi.png')} />
                 </View>
                 <View style={styles.row}>
-                    <Card title="Twitter" description="Gündemdeki hashtagleri görüntüle" assetName={require('../../assets/twitter.png')} />
-                    <Card title="Youtube" description="Trend videoları görüntüle" assetName={require('../../assets/youtube.png')} />
+                    <Card id="twitter" title="Twitter" description="Gündemdeki hashtagleri görüntüle" assetName={require('../../assets/twitter.png')} />
+                    <Card id="youtube" title="Youtube" description="Trend videoları görüntüle" assetName={require('../../assets/youtube.png')} />
                 </View>
                 <View style={styles.row}>
-                    <Card title="Reddit" description="Popüler başlıkları görüntüle" assetName={require('../../assets/reddit.png')} />
-                    <Card title="Son Dakika" description="Son dakika haberlerini görüntüle" assetName={require('../../assets/news.png')} />
+                    <Card id="reddit" title="Reddit" description="Popüler başlıkları görüntüle" assetName={require('../../assets/reddit.png')} />
+                    <Card id="news" title="Son Dakika" description="Son dakika haberlerini görüntüle" assetName={require('../../assets/news.png')} />
                 </View>
             </View>
 
