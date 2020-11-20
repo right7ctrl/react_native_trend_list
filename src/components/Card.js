@@ -3,16 +3,15 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 
-export default class Card extends Component {
-    render() {
+const Card = (props) => {
+    
         return (
             <View style={styles.card}>
-                <Image style={styles.icon} source={this.props.assetName} />
-                <Text style={styles.title}>{this.props.title}</Text>
-                <Text numberOfLines={2} style={styles.description}>{this.props.description}</Text>
+                <Image style={styles.icon} source={props.assetName} />
+                <Text style={styles.title}>{props.title}</Text>
+                <Text numberOfLines={2} style={styles.description}>{props.description}</Text>
             </View>
-        )
-    }
+        );
 }
 
 Card.propTypes = {
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 8,
         marginVertical: 8,
         borderRadius: 12,
-        shadowColor: "#000",
+        shadowColor: "#999",
         shadowOffset: {
             width: 0,
             height: 2,
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
         marginTop: 4,
         color: 'grey',
         fontSize: 12,
-        paddingHorizontal:12,
+        paddingHorizontal: 12,
         textAlign: 'center',
     },
     icon: {
@@ -57,3 +56,5 @@ const styles = StyleSheet.create({
         height: 60
     }
 });
+
+export default Card;
