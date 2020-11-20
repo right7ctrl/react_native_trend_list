@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native';
 import PropTypes from 'prop-types';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const Card = (props) => {
-    
-        return (
-            <View style={styles.card}>
+
+    return (
+        <View style={styles.card}>
+            <TouchableOpacity onPress={() => {
+                console.log(props.navigation);
+            }} style={styles.touchableOpacity}>
                 <Image style={styles.icon} source={props.assetName} />
                 <Text style={styles.title}>{props.title}</Text>
                 <Text numberOfLines={2} style={styles.description}>{props.description}</Text>
-            </View>
-        );
+            </TouchableOpacity>
+        </View>
+
+
+    );
 }
 
 Card.propTypes = {
@@ -39,6 +46,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    touchableOpacity: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
     title: {
         textAlign: 'center',
         fontSize: 18
@@ -47,13 +59,12 @@ const styles = StyleSheet.create({
         marginTop: 4,
         color: 'grey',
         fontSize: 12,
-        paddingHorizontal: 12,
         textAlign: 'center',
     },
     icon: {
         marginBottom: 16,
-        width: 60,
-        height: 60
+        width: 54,
+        height: 54
     }
 });
 

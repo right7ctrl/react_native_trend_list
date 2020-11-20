@@ -4,10 +4,10 @@ import Card from '../components/Card'
 
 const Home = () => {
     return (
-        <SafeAreaView style={{ flex: 1, marginTop: 36 }}>
+        <SafeAreaView style={{ flex: 1, marginTop: Platform.OS == 'ios' ? 0 : 36 }}>
             <Text style={styles.title}>Trendler</Text>
             <Text style={styles.slogan}>Gündemi takip edin!</Text>
-            <View style={styles.main}>
+            <View style={styles.container}>
                 <View style={styles.row}>
                     <Card title="Google" description="Popüler aramaları görüntüle" assetName={require('../../assets/google.png')} />
                     <Card title="Ekşi Sözlük" description="Gündemdeki başlıkları görüntüle" assetName={require('../../assets/eksi.png')} />
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#999'
     },
-    main: {
+    container: {
         flex: 1,
         padding: 4
     },
