@@ -15,7 +15,10 @@ const ListItem = (props) => {
             <Image style={styles.img} source={image} />
             <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
                 <Text numberOfLines={2}>{title}</Text>
-                <Text style={styles.extra}>{extra}</Text>
+                {
+                    extra ?  <Text  style={styles.extra}>{extra}</Text> : <View/>
+                }
+                
             </View>
             <Icon style={styles.icon} name="menu" />
         </View>
