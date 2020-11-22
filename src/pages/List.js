@@ -14,7 +14,6 @@ const List = (props) => {
 
 
     const fetchData = async () => {
-        console.log(route.params.title);
         setLoading(true);
         await fetch("http://api.yazilimgo.com/trending/index.php?src=" + route.params.id)
             .then((res) => res.json())
@@ -39,7 +38,7 @@ const List = (props) => {
 
             {
                 isLoading ?
-                    <ActivityIndicator style={styles.indicator} /> :
+                    <ActivityIndicator color='red' style={styles.indicator} /> :
                     <FlatList
                         style={styles.flatList}
                         data={data}
