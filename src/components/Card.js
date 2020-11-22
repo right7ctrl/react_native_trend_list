@@ -12,7 +12,8 @@ const Card = (props) => {
         <View style={styles.card}>
             <TouchableOpacity onPress={() => {
                 navigation.navigate('List', {
-                    navigation: navigation, title: props.title, id: props.id
+                    navigation: navigation, title: props.title, id: props.id,
+                    asset: props.assetName
                 });
             }} style={styles.touchableOpacity}>
                 <Image style={styles.icon} source={props.assetName} />

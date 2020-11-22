@@ -45,6 +45,7 @@ const List = (props) => {
                         data={data}
                         renderItem={(item) => <ListItem
                             key={data.indexOf(item)}
+                            asset={route.params.asset}
                             item={item} id={route.params.id} />}
                         keyExtractor={(item) => item.id}
                     />

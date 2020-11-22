@@ -4,8 +4,9 @@ import { Icon } from 'native-base';
 const { width, height } = Dimensions.get;
 const ListItem = (props) => {
     const { item } = props.item;
+    console.log(props);
     const isGoogle = props.id === 'google';
-    const image = isGoogle ? { uri: item.image.imageUrl } : require('../../assets/eksi.png');
+    const image = isGoogle ? { uri: item.image.imageUrl } : props.asset;
     const title = isGoogle ? item.title.query : item.title;
     const extra = isGoogle ? item.formattedTraffic : item.extra;
 
@@ -13,7 +14,7 @@ const ListItem = (props) => {
         <View style={styles.item}>
             <Image style={styles.img} source={image} />
             <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                <Text>{title}</Text>
+                <Text numberOfLines={2}>{title}</Text>
                 <Text style={styles.extra}>{extra}</Text>
             </View>
             <Icon style={styles.icon} name="menu" />
